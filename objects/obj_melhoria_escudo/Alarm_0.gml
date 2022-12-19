@@ -1,6 +1,4 @@
 /// @description Insert description here
-with(other){
-vida -= dano;
-}
+// You can write your code in this editor
 
 instance_destroy();

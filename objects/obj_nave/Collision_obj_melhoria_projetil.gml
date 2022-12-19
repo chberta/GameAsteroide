@@ -1,6 +1,9 @@
 /// @description Insert description here
-with(other){
-vida -= dano;
-}
 
-instance_destroy();
+alarm[2] = 300;
+
+dano_nave = 2;
+
+with(other){
+	instance_destroy();
+}
