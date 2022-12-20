@@ -12,5 +12,8 @@ if (x <= 0){
 }	
 
 
+
+image_angle = direction;
+
 image_xscale = dano;
 image_yscale = dano;

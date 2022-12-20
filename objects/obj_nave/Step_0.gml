@@ -1,23 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-/*
-if keyboard_check(vk_up){
-	sprite_index = spr_nave_movendo;
-	speed = 2;
-}else if keyboard_check(vk_down){
-	sprite_index = spr_nave_movendo;
-	speed = -2 
-}else{
-	sprite_index = spr_nave_parada;
-	speed = 0;
-}
-if keyboard_check(vk_left){
-	direction += 3;	
-}
-if keyboard_check(vk_right){
-	direction -= 3;
-}
-*/
+ /// @description Insert description here
 if keyboard_check(vk_up){
 	sprite_index = spr_nave_movendo;
 	speed = veloc;
@@ -34,10 +15,11 @@ if keyboard_check(vk_left){
 }else if keyboard_check(vk_right){
 	direc = -3;
 }else{
-	direc = lerp(direc, 0, 0.08);		
+	direc = lerp(direc, 0, 0.05);		
 }
 
 if keyboard_check_pressed(vk_space){
+	audio_play_sound(snd_projetil,1, false);
 	var inst = instance_create_layer(x, y, "Instances",obj_projetil);
 	
 	inst.speed = 6;
@@ -67,4 +49,8 @@ image_alpha = 1;
 
 if (vida <= 0) {
 	game_restart();	
+}
+
+if global.pont >= 1000{
+	room_goto(rm_final);	
 }
